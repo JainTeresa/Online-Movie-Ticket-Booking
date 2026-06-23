@@ -1,0 +1,525 @@
+* {
+    box-sizing: border-box;
+}
+/* Global styles */
+body, html {
+    font-family: Arial, sans-serif;
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+    max-width: 100%;
+    background-color: #f4f4f4;
+      
+      }
+
+.container {
+    width: 100%;
+    max-width: 1200px; /* Limits the content width */
+    margin: 0 auto;
+    }
+
+header {
+    width: 100%;
+    height: 120px;
+    background-color: #222;
+    color: #fff;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+    overflow: hidden;
+    }
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    max-width: 100%;
+}
+
+.logo {
+    height: 50px;
+    margin-right: 10px;
+}
+
+.brand-text h1 {
+    margin: 0;
+    font-size: 1.5rem;
+}
+
+.brand-text p {
+    margin: 0;
+    font-size: 0.8rem;
+    color: #fff; 
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 15px; 
+}
+
+nav ul li {
+    margin: 0;
+}
+
+nav ul li a {
+    color: #fff; 
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1rem;
+        }
+
+nav ul li a:hover {
+    color: #f39c12;
+}
+
+.nav-links li a.active {
+    color: pink; /* Change color for active link */
+    font-weight: bold; /* Optional: Make active link bold */
+}
+
+.search-bar-container {
+    display: flex;
+    align-items: center;
+}
+
+.search-bar {
+    padding: 8px;
+    border: none;
+    border-radius: 4px; 
+    width: 200px;
+}
+
+.search-btn { 
+    padding: 8px 12px;
+    background-color: #27ae60;
+    color: white;
+    border: none;
+    cursor: pointer;
+    margin-left: 5px;
+}
+
+.search-btn:hover {
+    background-color: #2ecc71;
+}
+
+main {
+    flex-grow: 1;
+    padding: 20px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* Movie Section */
+.movie-section {
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    }
+
+.movie-list {
+    width: 48%; /* Makes movie lists appear side by side in 50% split */
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.movie-poster {
+    width: 200px;
+    height: 250px;
+    margin-right: 20px;
+    
+}
+
+.movie-details {
+    flex-grow: 1;
+    text-align: left;     
+}
+
+.movie-details a {
+      text-decoration: none;  
+}
+
+.movie-details h3 {
+    margin-top: 15px;
+    margin-bottom: 30px;    
+    }
+
+.movie-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 8px;
+    text-align: center;
+    gap: 20px;
+    align-items: flex-start;
+}
+
+.movie-poster-container {
+    display: inline-block;
+    vertical-align: top;
+    margin-right: 20px;
+    margin-left: 30px;
+    margin-bottom:22px; 
+}
+
+.movie-poster-container img {
+    width: 250px;
+    height: 300px;
+}
+
+.movie-details-info {
+    display: inline-block;
+    vertical-align: top; 
+}
+  .movie-details-info h2 {
+      margin-bottom: 30px; 
+}
+
+.movie-details-info a {
+       text-decoration: none;
+     }
+
+.movie-extra-details {
+    margin-top: 20px;
+    margin-left: 30px;
+   } 
+  .movie-extra-details h3 {
+   margin-bottom: 25px;
+}
+
+.book-tickets-btn {
+    background-color: #ff9900;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;  
+}
+       
+/* Styles specifically for movies.php */
+.movies-page-section {
+    flex-grow: 1;
+    width: 100%;
+    padding: 20px;
+    display: flex;
+    flex-direction: column; 
+    
+   }
+
+.movies-heading {
+    text-align: center;
+    }
+
+.movies-page-section h2 {
+    margin-bottom: 10px; /* Add space between heading and the movie lists */
+}
+
+.movie-split-container-horizontal {
+    display: flex;
+    justify-content: space-between;
+    height: 100%;
+    width: 100%;
+    flex-wrap: wrap;
+    margin-top: 20px;
+    gap: 1%;
+    }
+
+.movie-list-left, .movie-list-right {
+    width: 48%; 
+    flex-grow: 1;
+    margin-right: 1%; 
+    padding: 10px; 
+    box-sizing: border-box;   
+}
+/* Add this to your existing style.css file */
+.booking-section {
+    padding: 20px;
+}
+
+.date-selection {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.date-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 15px;
+    border: 1px solid #ddd;
+    margin-right: 10px;
+    width: calc(14.28% - 10px);
+    background-color: lavender;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    text-decoration: none;
+}
+
+.date-box:hover {
+    background-color: #ff9900;
+}
+
+.date-box.selected {
+    background-color: #ff9900;
+    color: #fff;
+}
+
+.theatre-selection {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    text-decoration: none;
+}
+
+.theatre-box {
+    flex-basis: 45%;
+    margin-bottom: 20px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+.show-times {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    }
+
+.show-time-box {
+    padding: 15px;
+    border: 1px solid #ddd;
+    margin-right: 10px;
+    margin-bottom: 20px;
+    width: calc(8.20% - 10px);
+    background-color: lavender;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    text-decoration: none;
+    }
+
+.show-time-box:hover {
+    background-color: #ff9900;
+    color: #fff;
+}
+
+.show-time-box.selected {
+  background-color: #007bff; /* or any other color you prefer */
+  color: #fff;
+}
+
+.select-seats-btn-container {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.select-seats-btn {
+    background-color: #ff9900;
+    color: #fff;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    text-decoration: none;
+       }
+
+.select-seats-btn:hover {
+    background-color: #ffa07a;
+}
+
+
+/* Login section styles */
+.login-section {
+    background-image: url('images/login-bg.jpg'); /* Ensure it matches the register page */
+    background-size: cover;
+    background-position: center;
+    padding: 40px;
+    color: #fff;
+    
+    text-align: center;
+}
+
+.login-section h2 {
+    font-size: 24px; /* Same size as register page */
+    color: #333;  /* Same color as register heading */
+}
+
+.login-section form {
+    background-color: rgba(0, 0, 0, 0.7); 
+    padding: 30px;
+    border-radius: 8px;
+    display: inline-block;
+    max-width: 400px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+     gap: 15px;
+}
+
+.login-section .form-group {
+    text-align: left; 
+    margin-bottom: 15px; 
+}
+
+.login-section label {
+    font-weight: bold; 
+    color: #f4f4f4; 
+}
+
+.login-section input[type="email"],
+.login-section input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px; /* Same size as register inputs */
+    box-sizing: border-box;
+}
+
+.login-section button.login-btn {
+    background-color: #ff6347; /* Same color as register button */
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    width: 100%;
+}
+
+.login-section button.login-btn:hover {
+    background-color: #ff4500; /* Same hover color as register button */
+}
+
+.account-text {
+    color: #f4f4f4; /* Color for the account text */
+    font-size: 16px;
+    text-align: center;
+    margin-top: 1px;
+}
+
+.create-account-link {
+    color: #ff6347; /* Color for the link */
+    font-weight: bold;
+    text-decoration: none;
+    }
+
+.create-account-link:hover {
+        text-decoration: underline;
+}
+
+.error {
+    color: ff6961; /* Error message color */
+    margin-top: 10px;
+}
+
+
+/* Profile Section */
+.profile-section {
+    padding: 20px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+}
+
+.booking-history {
+    width: 48%;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.booking-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.booking-item {
+    margin-bottom: 20px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.booking-details h4 {
+    margin-top: 0;
+}
+
+.booking-details p {
+    margin-bottom: 10px;
+}
+
+
+/* Footer */
+footer {
+    background-color: #222;
+    color: #fff;
+    padding: 1rem;
+    text-align: center;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    height: 110px;
+     
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 50px;
+    max-width: 1200px;
+    margin: 0 auto;
+    }
+
+.contact-info h3,
+.social-media h3 {
+    margin-bottom: 10px;
+    margin-top: 0.1px;
+    color: #fff;
+    font-size: 16px;
+}
+
+.contact-info p {
+    margin-bottom: 10px;
+    margin-top: 1px;
+    }
+
+.social-media ul {
+    list-style: none;
+    display: flex;
+    padding: 0;
+    margin-bottom: 10px;
+    margin-top: 1px;
+   }
+
+.social-media ul li {
+    margin-right: 15px;
+}
+
+.social-media ul li a img {
+    width: 20px;
+    height: 20px;
+}
+
+footer p {
+    margin-bottom: 10px;
+    margin-top: 1px;
+    font-size: 16px;
+     }
+
+
